@@ -30,7 +30,7 @@ time_sue = 0
 micro_sue = False
 start_time = 0
 final = 0
-algo = 0
+tresh = 0
 mixer.init()
 mixer.music.load("alarma.mp3")
 
@@ -77,7 +77,7 @@ with mp_face_mesh.FaceMesh(
                 start_time = time.time()
             #print(start_time)
             alarma_encendida = None
-            # OJOS CERRADOS
+            # OJOS CLOSED
              
             while ear > EAR_THRESH and parpadeo == True:
                 aux_counter +=1
@@ -94,12 +94,10 @@ with mp_face_mesh.FaceMesh(
                 alarma_encendida = False
             
                 
-            if algo >= 110:
-                print("final")
+            if tresh >= 110:
                 mixer.music.play()
                 final = 0 
-                algo = 0
-                print("saliooooooooooooooooo")
+                tresh = 0
                     
             while ear <= EAR_THRESH and parpadeo == False:
                 final_sue = time.time()
@@ -108,9 +106,9 @@ with mp_face_mesh.FaceMesh(
                 start_time = 0
                 parpadeo = True
                 print(parpadeo)
-                algo = 0
+                tresh = 0
             
-            algo += 1
+            tresh += 1
              
             time_sue = round(start_sue - final_sue, 0)
             if time_sue >= 3:
@@ -119,7 +117,7 @@ with mp_face_mesh.FaceMesh(
                 start_sue = 0
                 final_sue = 0
                 print(conteo_sue)
-                print("microsueño")
+                print("microsleep")
                 print(time_sue)
             micro_sue = False
 
