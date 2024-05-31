@@ -1,0 +1,4 @@
+# Deteccion de microsueños a través de visión artificial.
+
+El proyecto que se presenta, tuvo como objetivo general implementar un sistema de video de vigilancia para la detección de micro sueños a través de visión artificial.
+se diseñó la unidad de control central y de procesamiento de datos del sistema de video de vigilancia para la detección de micro sueños a través de visión artificial con una Raspberry Pi, el software de visión artificial y el manejo de los datos usando lenguaje Python, la interfaz para el encendido y apagado de la alarma y se conectó la unidad GSM al módulo de control para el envío de mensajes de texto que alerten a la presencia supervisora que el conductor tiene micro sueño o fatiga. Concluyendo que el sistema es capaz de reconocer micro sueños presentes en los conductores y generar una alerta de posible accidente, generado por la fatiga que se puede presentar en la persona que se encuentra conduciendo.
